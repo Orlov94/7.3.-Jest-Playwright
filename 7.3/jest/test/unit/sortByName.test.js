@@ -15,3 +15,20 @@ describe("Books names test suit", () => {
     ]);
   });
 });
+describe("Books names negative result", () => {
+  it("Books names not shouldb e sorted in ascending order", () => {
+    expect(
+      sorting.sortByName([
+        "Марк Твен",
+        "Заводной апельсин",
+        "О дивный новый мир",
+        "Заводной апельсин",
+      ])
+    ).toEqual([
+      "Заводной апельсин",
+      "Заводной апельсин",
+      "Марк Твен",
+      "О дивный новый мир",
+    ]);
+  });
+});
